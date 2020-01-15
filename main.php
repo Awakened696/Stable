@@ -2,11 +2,11 @@
 
 //Класс животных
 abstract class Animal{
-    //Статическая переменая для хранения ключа
+    //Переменая для хранения ключа
     static $id = 1;
     //Номер животного
     public $idAnimal=0;
-    //Сколько дает
+    //Сколько дает продукции
     public abstract function getProduct();
 
     public function getNameOfClass()
@@ -52,18 +52,22 @@ class Stable
     }
 }
 
-$factory=new Stable();
+$stable = new Stable();
 //Массив со всеми животными
 $a = array();
 
 //Добавляем 10 коров в хлев
 for($i=1;$i<=10;$i++){
-    $a[]=$factory->createCow();
+    
+    $a[] = $stable->createCow();
+    
 }
 
 //Добавляем 20 кур в хлев
 for($i=1;$i<=20;$i++){
-    $a[]=$factory->createСhicken();
+    
+    $a[] = $stable->createСhicken();
+    
 }
 
 //Корзина с молоком и яйцами пустая
